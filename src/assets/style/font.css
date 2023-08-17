@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "Monument";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/MonumentExtendedLight.otf");
+}
+
+@font-face {
+  font-family: "Monument";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/MonumentExtendedRegular.otf");
+}
+
+@font-face {
+  font-family: "Monument";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/MonumentExtendedBold.otf");
+}

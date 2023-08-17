@@ -1,0 +1,48 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        "monument": ["Monument", "sans-serif"],
+        "epilogue": ["Epilogue", "sans-serif"],
+      },
+      screens: {
+        "sm": "576px",
+        "md": "768px",
+        "lg": "992px",
+        "xl": "1200px",
+        "2xl": "1320px",
+      },
+      colors: {
+        "color-main": "#080134",
+        "color-main-2": "#0B062D",
+        "primary": "#018DF0",
+        "secondary": "#01C5BA",
+        "success": "#45E498",
+        "warning": "#FAE637",
+        "error": "#EF466F",
+        "neutral-80": "#393556",
+        "neutral-60": "#6B6785",
+        "neutral-40": "#9C99AE",
+        "neutral-20": "#CECCD6",
+        "neutral-10": "#E6E6EB",
+        "light-green": "#27D1AA",
+        "light-pink": "#FF72D2",
+        "light-purple": "#C379F6",
+        "light-yellow": "#FFD166",
+        "light-blue": "#FFD166",
+        "dark-green": "#064462",
+        "dark-pink": "##561857",
+        "dark-purple": "#2D1446",
+        "dark-yellow": "#433340",
+        "dark-blue": "#211857",
+        "dark-red": "#571848",
+        "action-hovered": "#1CAAA2",
+        "action-pressed": "#398D88",
+        "action-disabled": "#003F3B",
+      },
+    },
+  },
+  plugins: [],
+};
