@@ -1,6 +1,6 @@
 import { INotification } from "../../const";
 import tag from "../../assets/img/notification-tags.png";
-import check from "../../assets/img/notification-check.svg";
+//import check from "../../assets/img/notification-check.svg";
 import bag from "../../assets/img/shopping-bag.svg";
 import heart from "../../assets/img/heart.png";
 
