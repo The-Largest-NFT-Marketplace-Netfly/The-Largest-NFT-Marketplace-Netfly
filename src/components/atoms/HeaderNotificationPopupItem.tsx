@@ -15,15 +15,15 @@ function HeaderNotificationPopupItem({ username, product, time, action }: INotif
       : bag;
 
   return (
-    <div className='text-[14px] flex items-start gap-[8px] leading-[1.3] py-[16px]'>
+    <div className='text-[12px] flex items-start gap-[8px] leading-[1] py-[14px] border-b border-neutral-60'>
       <img src={icon} alt="icon"/>
       <div>
-        <p className=' leading-[1.3]'>
-          {username}
-          <span className='text-neutral-40 '> {action} </span>
-          {product}
+        <p className=' leading-[1.7]'>
+          {username}{" "}
+          <span className='text-neutral-40'>{action}</span>
+          {" "}{product}
         </p>
-        <span className='text-light-yellow text-[11px]'>{time}</span>
+        <span className='mt-[4px] text-light-yellow text-[11px]'>{time}</span>
       </div>
     </div>
   );

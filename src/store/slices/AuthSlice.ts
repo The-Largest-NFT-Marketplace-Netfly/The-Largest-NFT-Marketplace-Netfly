@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 export interface IAuthSlice { isLogin: boolean; }
-const initialState: IAuthSlice = { isLogin: true }
+const initialState: IAuthSlice = { isLogin: false }
 
 export const AuthSlice = createSlice({
     name: "auth",

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import arrowDown from "../../assets/img/arrow-down.png";
 import HeaderPopupWrapper from "./HeaderPopupWrapper";
 
@@ -10,12 +10,14 @@ function HeaderMenu() {
   const { isLogin } = useSelector((store: RootState) => store.auth);
 
   return (
-    <ul className='flex items-center gap-[31px] h-[84px]'>
+    <ul className='hidden lg:flex items-center gap-[31px] h-[84px]'>
       <li>
-        <Link to='/'>Discover</Link>
+        <NavLink className='menu-item' to='/'>
+          Discover
+        </NavLink>
       </li>
       <li className='group flex items-center relative h-full'>
-        <Link to='/'>Activity</Link>
+        <p className='menu-item'>Activity</p>
         <img
           className='group-hover:rotate-[180deg] transition-all'
           src={arrowDown}
@@ -26,9 +28,21 @@ function HeaderMenu() {
         </HeaderPopupWrapper>
       </li>
       <li>
-        <Link to='/'>Forum</Link>
+        <NavLink className='menu-item' to='/forum'>
+          Forum
+        </NavLink>
       </li>
-      <li>{isLogin ? <Link to='/'>News</Link> : <Link to='/'>Blogs</Link>}</li>
+      <li>
+        {isLogin ? (
+          <NavLink className='menu-item' to='/news'>
+            News
+          </NavLink>
+        ) : (
+          <NavLink className='menu-item' to='/blogs'>
+            Blogs
+          </NavLink>
+        )}
+      </li>
     </ul>
   );
 }
