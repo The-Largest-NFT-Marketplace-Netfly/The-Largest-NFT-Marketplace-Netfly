@@ -17,7 +17,7 @@ function HamburgerMenu() {
       >
         <img src={coin} alt='' />
         <div>
-          <span className='text-[14px] text-neutral-20'>Your Balance</span>
+          <span className='text-[14px] text-neutral-20 pb-[6px]'>Your Balance</span>
           <h3 className='font-monument text-[20px]'>7.00434 ETH</h3>
         </div>
       </div>

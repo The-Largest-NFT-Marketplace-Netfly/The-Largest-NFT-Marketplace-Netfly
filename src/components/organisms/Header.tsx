@@ -4,11 +4,14 @@ import HeaderSearch from "../atoms/HeaderSearch";
 import HeaderMenu from "../molecules/HeaderMenu";
 import HeaderRight from "../molecules/HeaderRight";
 import HamburgerMenu from "../molecules/HamburgerMenu";
-
 import MobileSearchBox from "../molecules/MobileSearchBox";
 import MobileNotification from "../molecules/MobileNotification";
+import MobileUser from "../molecules/MobileUser";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 
 function Header() {
+  const { isLogin } = useSelector((store: RootState) => store.auth);
   return (
     <header className='text-white font-epilogue min-h-[84px]'>
       <nav className='w-full bg-color-main fixed min-h-[84px] top-0 z-[99]  border-b border-neutral-80 '>
@@ -27,9 +30,14 @@ function Header() {
         </div>
       </nav>
       <div id='additions'>
-        <MobileNotification />
         <MobileSearchBox />
-        <HamburgerMenu />
+        <MobileNotification />
+        {isLogin && (
+          <>
+            <MobileUser />
+            <HamburgerMenu />
+          </>
+        )}
       </div>
     </header>
   );

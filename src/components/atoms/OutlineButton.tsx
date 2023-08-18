@@ -8,7 +8,7 @@ function OutlineButton({ children, onClick }: IOutlineButton) {
     <button
       onClick={onClick}
       id='outlineBtn'
-      className='px-[32px] h-[44px] py-[8px] border border-secondary font-semibold'
+      className=' px-[10px] text-[13px] xs:[16px] xs:px-[32px] h-[44px] py-[8px] border border-secondary font-semibold'
     >
       {children}
     </button>

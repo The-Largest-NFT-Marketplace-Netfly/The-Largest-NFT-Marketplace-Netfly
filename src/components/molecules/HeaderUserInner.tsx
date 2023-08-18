@@ -1,19 +1,20 @@
-import HeaderPopupWrapperRight from "./HeaderPopupWrapperRight";
 import avatar from "../../assets/img/profile-avatar.svg";
 import OutlineButton from "../atoms/OutlineButton";
 import { Link } from "react-router-dom";
 import { profileItems } from "../../const";
 import logoutImg from "../../assets/img/logout.png";
 import { useDispatch } from "react-redux";
+import { resetHeader } from "../../store/slices/LayoutSlice";
 import { setLogin } from "../../store/slices/AuthSlice";
 
-function HeaderProfilePopup() {
+function HeaderUserInner() {
   const dispatch = useDispatch();
-
-  const logout = () => dispatch(setLogin());
-
+  const logout = () => {
+      dispatch(resetHeader());
+      dispatch(setLogin());
+  };
   return (
-    <HeaderPopupWrapperRight>
+    <>
       <div className='flex items-center gap-[16px] mb-[24px] pt-[10px] '>
         <img src={avatar} alt='avatar' />
         <div className='flex flex-col gap-[6px] mt-[6px]'>
@@ -39,8 +40,8 @@ function HeaderProfilePopup() {
           <h3>Logout</h3>
         </li>
       </ul>
-    </HeaderPopupWrapperRight>
+    </>
   );
 }
 
-export default HeaderProfilePopup;
+export default HeaderUserInner;

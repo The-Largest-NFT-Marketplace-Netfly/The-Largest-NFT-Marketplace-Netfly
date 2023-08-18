@@ -31,7 +31,7 @@
 
 
   #root {
-    overflow: hidden;
+    @apply bg-color-main overflow-x-hidden
   }
 
   .menu-item.active {

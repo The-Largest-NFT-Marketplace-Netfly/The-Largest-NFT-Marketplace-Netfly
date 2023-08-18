@@ -2,15 +2,18 @@ import bell from "../../assets/img/bell.svg";
 import wallet from "../../assets/img/wallet.png";
 import avatar from "../../assets/img/profile-avatar.svg";
 import { useDispatch } from "react-redux";
-import { setActNotification } from "../../store/slices/LayoutSlice";
+import { setActNotification, setActUserProfile } from "../../store/slices/LayoutSlice";
 import HeaderWalletPopup from "./HeaderWalletPopup";
 import HeaderNotificationPopup from "./HeaderNotificationPopup";
-import HeaderProfilePopup from "./HeaderProfilePopup";
+import HeaderUserPopup from "./HeaderUserPopup";
 
 function HeaderProfile() {
   const dispatch = useDispatch();
   const handlerNotification = () => {
     if (window.innerWidth < 992) dispatch(setActNotification());
+  };
+  const handlerUserProfile = () => {
+    if (window.innerWidth < 992) dispatch(setActUserProfile());
   };
   return (
     <div className='flex gap-[12px] xs:gap-[24px] items-center h-[84px]'>
@@ -25,9 +28,12 @@ function HeaderProfile() {
         <img src={wallet} alt='wallet' />
         <HeaderWalletPopup />
       </div>
-      <div className='w-[26px] h-[26px] group lg:w-[32px] md:h-full flex items-center'>
+      <div
+        onClick={handlerUserProfile}
+        className='w-[26px] h-[26px] group lg:w-[32px] md:h-full flex items-center'
+      >
         <img src={avatar} alt='avatar' />
-        <HeaderProfilePopup />
+        <HeaderUserPopup />
       </div>
     </div>
   );

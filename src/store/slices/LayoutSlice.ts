@@ -4,14 +4,16 @@ import { createSlice } from "@reduxjs/toolkit";
 export interface ILayoutSlice {
     isActHamburger: boolean;
     isActiveSearchbox: boolean;
-    isActiveNotification: boolean
+    isActiveNotification: boolean;
+    isActiveUserProfile: boolean
 }
 
 
 const initialState: ILayoutSlice = {
     isActHamburger: false,
     isActiveSearchbox: false,
-    isActiveNotification: false
+    isActiveNotification: false,
+    isActiveUserProfile: false,
 };
 
 export const LayoutSlice = createSlice({
@@ -26,8 +28,14 @@ export const LayoutSlice = createSlice({
         },
         setActNotification: (state) => {
             return { ...initialState, isActiveNotification: !state.isActiveNotification }
+        },
+        setActUserProfile: (state) => {
+            return { ...initialState, isActiveUserProfile: !state.isActiveUserProfile }
+        },
+        resetHeader: () => {
+            return { ...initialState }
         }
     }
 })
 
-export const { setActHamburger, setActiveSearchBox, setActNotification } = LayoutSlice.actions
+export const { setActHamburger, setActiveSearchBox, setActNotification, setActUserProfile, resetHeader } = LayoutSlice.actions
