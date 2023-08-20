@@ -8,6 +8,7 @@ export default {
         "epilogue": ["Epilogue", "sans-serif"],
       },
       screens: {
+        "xs": "327px",
         "sm": "576px",
         "md": "768px",
         "lg": "992px",
