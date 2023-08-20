@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import coin from "../../assets/img/Coin.png";
+import coin from "../../assets/img/coin.png";
 import HamburgerInner from "./HamburgerInner";
 import { RootState } from "../../store";
 

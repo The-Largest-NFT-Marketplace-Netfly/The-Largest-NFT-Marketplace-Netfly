@@ -1,4 +1,4 @@
-import crypto from "../../assets/img/Crypto.svg";
+import crypto from "../../assets/img/crypto.svg";
 import users from "../../assets/img/users.svg";
 
 function HeaderActivityPopupInner() {

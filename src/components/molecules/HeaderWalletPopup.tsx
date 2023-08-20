@@ -1,5 +1,5 @@
 import OutlineButton from "../atoms/OutlineButton";
-import coin from "../../assets/img/Coin.png";
+import coin from "../../assets/img/coin.png";
 import HeaderPopupWrapperRight from "./HeaderPopupWrapperRight";
 
 function HeaderWalletPopup() {
