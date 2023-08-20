@@ -16,5 +16,5 @@ export const router = createBrowserRouter(
         <Route path='edit' element={<EditProfile />} />
       </Route>
     </Route>
-  )
+  ),{basename: "/The-Largest-NFT-Marketplace-Netfly/"}
 );
