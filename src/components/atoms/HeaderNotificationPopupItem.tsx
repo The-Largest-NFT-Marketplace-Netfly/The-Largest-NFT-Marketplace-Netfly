@@ -1,6 +1,7 @@
 import { INotification } from "../../const";
 import tag from "../../assets/img/notification-tags.png";
-import check from "../../assets/img/notification-check.svg";
+
+//import check from "../../assets/img/notification-check.svg";
 import bag from "../../assets/img/shopping-bag.svg";
 import heart from "../../assets/img/heart.png";
 
@@ -9,14 +10,14 @@ function HeaderNotificationPopupItem({ username, product, time, action }: INotif
     action.toLowerCase() == "make an offer to"
       ? tag
       : action.toLowerCase() == "purchased"
-      ? bag
-      : action.toLowerCase() == "liked"
-      ? heart
-      : bag;
+        ? bag
+        : action.toLowerCase() == "liked"
+          ? heart
+          : bag;
 
   return (
     <div className='text-[14px] flex items-start gap-[8px] leading-[1.3] py-[16px]'>
-      <img src={icon} alt="icon"/>
+      <img src={icon} alt="icon" />
       <div>
         <p className=' leading-[1.3]'>
           {username}
